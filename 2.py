@@ -88,17 +88,6 @@ finally:
 # Program finished.
 
 
-# isalpha() to check if all characters in a string are alphabets and is not empty.
-# isalnum() to check if all characters in a string are alphanumeric (letters and numbers) and is not empty.
-# isdecimal() to check if all characters in a string are decimal characters and is not empty.
-# lower() to convert all characters in a string to lowercase.
-# islower() to check if all characters in a string are lowercase.
-# upper() to convert all characters in a string to uppercase.
-# isupper() to check if all characters in a string are uppercase.
-# title() to convert the first character of each word in a string to uppercase.
-# startswith() to check if a string starts with a specified substring.
-
-
 name = "Beapu"
 print(name.lower())    # Output: beapu
 print("au" in name) 
@@ -126,8 +115,34 @@ print(abs(-5.5)) # Output: 5.5
 print(round(5.49)) #Output:5
 print(round(5.5)) #Output:6
 
+#Casting
+x = int(1)   # x will be 1
+y = int(2.8) # y will be 2
+z = int("3") # z will be 3
 
-#list vs tuple
+x = float(1)     # x will be 1.0
+y = float(2.8)   # y will be 2.8
+z = float("3")   # z will be 3.0
+w = float("4.2") # w will be 4.2
+
+x = str("s1") # x will be 's1'
+y = str(2)    # y will be '2'
+z = str(3.0)  # z will be '3.0'
+
+print("He is called 'Johnny'")
+print('He is called "Johnny"')
+
+#You can assign a multiline string to a variable by using three quotes.
+a = """Lorem ipsum dolor sit amet,
+consectetur adipiscing elit,
+sed do eiusmod tempor incididunt
+ut labore et dolore magna aliqua."""
+print(a)
+
+txt = "The best things in life are free!"
+print("free" in txt)
+#True
+
 
 
 
