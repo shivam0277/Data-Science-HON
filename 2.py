@@ -12,6 +12,23 @@ number = "25"
 age = int(number)
 print(type(age))  # Output: <class 'int'> 
 
+x = range(10)
+#display x:
+print(x)
+#convert to list to display the content of x:
+print(list(x))
+# Output: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+
+x = {"name" : "John", "age" : 36}
+#display x:
+print(x)
+#display the data type of x:
+print(type(x)) 
+
+
+
+
 
 #while loop
 # Print numbers from 1 to 5 using while loop
@@ -70,6 +87,47 @@ finally:
 # Division successful!
 # Program finished.
 
+
+# isalpha() to check if all characters in a string are alphabets and is not empty.
+# isalnum() to check if all characters in a string are alphanumeric (letters and numbers) and is not empty.
+# isdecimal() to check if all characters in a string are decimal characters and is not empty.
+# lower() to convert all characters in a string to lowercase.
+# islower() to check if all characters in a string are lowercase.
+# upper() to convert all characters in a string to uppercase.
+# isupper() to check if all characters in a string are uppercase.
+# title() to convert the first character of each word in a string to uppercase.
+# startswith() to check if a string starts with a specified substring.
+
+
+name = "Beapu"
+print(name.lower())    # Output: beapu
+print("au" in name) 
+
+name = 'Be\nau'
+print(name)
+print(name[0])
+print(name[-1])
+print(name[1:2]) 
+print(name[5:0])
+
+
+done=""
+if done:
+    print("yes")
+else:
+    print("no")
+
+num1 = 2+3j
+num2 = complex(2,3)
+print(num2.real, num2.imag)
+
+
+print(abs(-5.5)) # Output: 5.5
+print(round(5.49)) #Output:5
+print(round(5.5)) #Output:6
+
+
+#list vs tuple
 
 
 
