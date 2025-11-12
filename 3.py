@@ -151,3 +151,233 @@ print(thislist)
 thislist = ["apple", "banana", "cherry"]
 thislist.insert(2, "watermelon")
 print(thislist)
+
+thislist = ["apple", "banana", "cherry"]
+thislist.append("orange")
+print(thislist)
+#Output: ['apple', 'banana', 'cherry', 'orange']
+
+thislist = ["apple", "banana", "cherry"]
+thislist.insert(1, "orange")
+print(thislist)
+#Output: ['apple', 'orange', 'banana', 'cherry']
+
+thislist = ["apple", "banana", "cherry"]
+tropical = ["mango", "pineapple", "papaya"]
+thislist.extend(tropical)
+print(thislist)
+#Output: ['apple', 'banana', 'cherry', 'mango', 'pineapple', 'papaya']
+
+# The extend() method does not have to append lists, you can add any iterable object (tuples, sets, dictionaries etc.)
+# Add elements of a tuple to a list:
+thislist = ["apple", "banana", "cherry"]
+thistuple = ("kiwi", "orange")
+thislist.extend(thistuple)
+print(thislist)
+#Output: ['apple', 'banana', 'cherry', 'kiwi', 'orange']
+
+thislist = ["apple", "banana", "cherry"]
+thislist.remove("banana")
+print(thislist)
+#Output: ['apple', 'cherry']
+
+#Remove the first occurrence of "banana":
+thislist = ["apple", "banana", "cherry", "banana", "kiwi"]
+thislist.remove("banana")
+print(thislist)
+
+thislist = ["apple", "banana", "cherry"]
+thislist.pop(1)
+print(thislist)
+#Output: ['apple', 'cherry']
+
+thislist = ["apple", "banana", "cherry"]
+del thislist[0]
+print(thislist)
+#delete entire list 
+del thislist
+
+#Clear the list content:
+thislist = ["apple", "banana", "cherry"]
+thislist.clear()
+print(thislist)
+
+#Loop Through a List
+thislist = ["apple", "banana", "cherry"]
+for x in thislist:
+  print(x)
+
+#Using a while loop:
+thislist = ["apple", "banana", "cherry"]
+i = 0
+while i < len(thislist):
+  print(thislist[i])
+  i = i + 1
+
+#List Comprehension
+thislist = ["apple", "banana", "cherry"]
+[print(x) for x in thislist]
+
+
+# List comprehension offers a shorter syntax when you want to create a new list based on the values of an existing list.
+# Example:
+# Based on a list of fruits, you want a new list, containing only the fruits with the letter "a" in the name.
+# Without list comprehension you will have to write a for statement with a conditional test inside:
+fruits = ["apple", "banana", "cherry", "kiwi", "mango"]
+newlist = []
+
+for x in fruits:
+  if "a" in x:
+    newlist.append(x)
+
+print(newlist)
+#Output: ['apple', 'banana', 'mango']
+
+# With list comprehension you can do all that with only one line of code:
+# Example
+fruits = ["apple", "banana", "cherry", "kiwi", "mango"]
+newlist = [x for x in fruits if "a" in x]
+print(newlist)
+
+#Set all values in the new list to 'hello':
+newlist = ['hello' for x in fruits]
+
+thislist = [100, 50, 65, 82, 23]
+thislist.sort()
+print(thislist)
+
+#To sort descending, use the keyword argument reverse = True:
+thislist = ["orange", "mango", "kiwi", "pineapple", "banana"]
+thislist.sort(reverse = True)
+print(thislist)
+
+#Case sensitive sorting can give an unexpected result
+['Kiwi', 'Orange', 'banana', 'cherry']
+#Perform a case-insensitive sort of the list:
+['banana', 'cherry', 'Kiwi', 'Orange']
+
+
+#Sort the list based on how close the number is to 50:
+def myfunc(n):
+  return abs(n - 50)
+thislist = [100, 50, 65, 82, 23]
+thislist.sort(key = myfunc)
+print(thislist)
+
+#Reverse the order of the list items:
+thislist = ["banana", "Orange", "Kiwi", "cherry"]
+thislist.reverse()
+print(thislist)
+
+#Make a copy of a list with the copy() method:
+thislist = ["apple", "banana", "cherry"]
+mylist = thislist.copy()
+print(mylist)
+
+#or
+thislist = ["apple", "banana", "cherry"]
+mylist = thislist[:]
+
+#Join two list
+list3 = list1 + list2
+#or
+for x in list2:
+  list1.append(x)
+#or
+list1.extend(list2)
+
+# append()	Adds an element at the end of the list
+# clear()	Removes all the elements from the list
+# copy()	Returns a copy of the list
+# count()	Returns the number of elements with the specified value
+# extend()	Add the elements of a list (or any iterable), to the end of the current list
+# index()	Returns the index of the first element with the specified value
+# insert()	Adds an element at the specified position
+# pop()	Removes the element at the specified position
+# remove()	Removes the item with the specified value
+# reverse()	Reverses the order of the list
+# sort()	Sorts the list
+
+
+
+# Tuples are used to store multiple items in a single variable.
+# Tuple is one of 4 built-in data types in Python used to store collections of data, the other 3 are List, Set, and Dictionary, 
+# all with different qualities and usage.
+# A tuple is a collection which is ordered and unchangeable.
+
+
+thistuple = ("apple",)
+print(type(thistuple))
+
+#NOT a tuple
+thistuple = ("apple")
+print(type(thistuple))
+
+tuple1 = ("abc", 34, True, 40, "male")
+
+#The tuple() Constructor
+thistuple = tuple(("apple", "banana", "cherry")) # note the double round-brackets
+
+
+thistuple = ("apple", "banana", "cherry", "orange", "kiwi", "melon", "mango")
+print(thistuple[-4:-1])
+#Output: ('orange', 'kiwi', 'melon')
+#Negative indexing means starting from the end of the tuple.
+#This example returns the items from index -4 (included) to index -1 (excluded)
+#Remember that the last item has the index -1,
+
+#Convert the tuple into a list to be able to change it:
+x = ("apple", "banana", "cherry")
+y = list(x)
+y[1] = "kiwi"
+x = tuple(y)
+
+thistuple = ("apple", "banana", "cherry")
+y = list(thistuple)
+y.append("orange")
+
+
+# Add tuple to a tuple. You are allowed to add tuples to tuples, so if you want to add one item, (or many), create a new tuple 
+# with the item(s), and add it to the existing tuple:
+# Example
+thistuple = ("apple", "banana", "cherry")
+y = ("orange",)
+thistuple += y
+
+#Remove items
+thistuple = ("apple", "banana", "cherry")
+y = list(thistuple)
+y.remove("apple")
+
+thistuple = ("apple", "banana", "cherry")
+del thistuple
+print(thistuple) #this will raise an error because the tuple no longer exists
+
+#When we create a tuple, we normally assign values to it. This is called "packing" a tuple
+#But, in Python, we are also allowed to extract the values back into variables. This is called "unpacking"
+fruits = ("apple", "banana", "cherry")
+(green, yellow, red) = fruits
+print(green)
+print(yellow)
+print(red)
+#Output: apple banana cherry
+
+#Add a list of values the "tropic" variable:
+fruits = ("apple", "mango", "papaya", "pineapple", "cherry")
+(green, *tropic, red) = fruits
+print(green)
+print(tropic)
+print(red)
+#Output: apple ['mango', 'papaya', 'pineapple'] cherry
+
+tuple1 = ("a", "b" , "c")
+tuple2 = (1, 2, 3)
+tuple3 = tuple1 + tuple2
+
+fruits = ("apple", "banana", "cherry")
+mytuple = fruits * 2
+print(mytuple)
+#Output: ('apple', 'banana', 'cherry', 'apple', 'banana', 'cherry')
+
+# count()	Returns the number of times a specified value occurs in a tuple
+# index()	Searches the tuple for a specified value and returns the position of where it was found
