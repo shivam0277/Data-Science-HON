@@ -308,3 +308,211 @@ print(factorial(5))
 # is called, it continues from where it left off.
 #Generator saves memory
 
+
+
+# If the range function is called with three arguments, the third argument represents the step value.
+# The step value means the difference between each number in the sequence. It is optional, and if not provided, it defaults to 1.
+# range(3, 10, 2) returns a sequence of each number from 3 to 9, with a step of 2:
+x = range(3, 10, 2)
+
+
+
+# The range object is a data type that represents an immutable sequence of numbers, and it is not directly displayable.
+# Therefore, ranges are often converted to lists for display.
+# Convert different ranges to lists:
+print(list(range(5)))
+print(list(range(1, 6)))
+print(list(range(5, 20, 3)))
+
+
+#Python does not have built-in support for Arrays, but Python Lists can be used instead.
+#however, to work with arrays in Python you will have to import a library, like the NumPy library.
+import array as arr
+#Create an array
+cars = ["Ford", "Volvo", "BMW"]
+cars.append("Honda") #Add an element to the array
+cars.pop(1) #Remove an element from the array
+cars.remove("Volvo")
+
+# append()	Adds an element at the end of the list
+# clear()	Removes all the elements from the list
+# copy()	Returns a copy of the list
+# count()	Returns the number of elements with the specified value
+# extend()	Add the elements of a list (or any iterable), to the end of the current list
+# index()	Returns the index of the first element with the specified value
+# insert()	Adds an element at the specified position
+# pop()	Removes the element at the specified position
+# remove()	Removes the first item with the specified value
+# reverse()	Reverses the order of the list
+# sort()	Sorts the list
+
+
+
+# An iterator is an object that contains a countable number of values.
+# An iterator is an object that can be iterated upon, meaning that you can traverse through all the values.
+# Technically, in Python, an iterator is an object which implements the iterator protocol, which 
+# consist of the methods __iter__() and __next__().
+
+# Iterator vs Iterable
+# Lists, tuples, dictionaries, and sets are all iterable objects. They are iterable containers which 
+# you can get an iterator from.
+#Strings are also iterable objects, and can return an iterator
+# All these objects have a iter() method which is used to get an iterator:
+
+mytuple = ("apple", "banana", "cherry")
+myit = iter(mytuple)
+
+print(next(myit))
+print(next(myit))
+print(next(myit))
+# Output: apple banana cherry
+
+#Create an iterator that returns numbers, starting with 1, and each sequence will increase 
+# by one (returning 1,2,3,4,5 etc.):
+# class MyNumbers:
+#   def __iter__(self):
+#     self.a = 1
+#     return self
+
+#   def __next__(self):
+#     x = self.a
+#     self.a += 1
+#     return x
+
+# myclass = MyNumbers()
+# myiter = iter(myclass)
+
+# print(next(myiter))
+# print(next(myiter))
+# print(next(myiter))
+# print(next(myiter))
+# print(next(myiter))
+
+# The example above would continue forever if you had enough next() statements, or if it was used in a for loop.
+# To prevent the iteration from going on forever, we can use the StopIteration statement.
+# In the __next__() method, we can add a terminating condition to raise an error if the iteration is done a specified number of times:
+
+
+# Consider a module to be the same as a code library.
+# A file containing a set of functions you want to include in your application.
+# Create a Module
+# To create a module just save the code you want in a file with the file extension .py:
+
+#Save this code in a file named mymodule.py
+def greeting(name):
+  print("Hello, " + name)
+
+# Now we can use the module we just created, by using the import statement:
+# Example
+# Import the module named mymodule, and call the greeting function:
+
+# import mymodule
+# mymodule.greeting("Jonathan")
+
+
+# Save this code in the file mymodule.py
+# person1 = {
+#   "name": "John",
+#   "age": 36,
+#   "country": "Norway"
+# }
+# Example
+# Import the module named mymodule, and access the person1 dictionary:
+
+# import mymodule
+
+# a = mymodule.person1["age"]
+# print(a)
+
+
+import math
+x = min(5, 10, 25)
+y = max(5, 10, 25)
+z = math.sqrt(64)
+a = math.pi
+b= math.ceil(1.4)
+c= math.floor(1.4)
+d= math.pow(2, 3)
+e= abs(-7.25)
+
+
+# JSON is a syntax for storing and exchanging data.
+# JSON is text, written with JavaScript object notation.
+# Convert from JSON to Python:
+import json
+# some JSON:
+x =  '{ "name":"John", "age":30, "city":"New York"}'
+# parse x:
+y = json.loads(x)
+# the result is a Python dictionary:
+print(y["age"])
+
+# convert from Python to JSON:
+import json
+# a Python object (dict):
+x = {
+  "name": "John",
+  "age": 30,
+  "city": "New York"
+}
+# convert into JSON:
+y = json.dumps(x)
+# the result is a JSON string:
+print(y)
+
+
+#PIP is a package manager for Python packages, or modules if you like.
+# A package contains all the files you need for a module.
+# Modules are Python code libraries you can include in your project.
+
+txt = f"The price is 49 dollars"
+print(txt)
+
+#Display the price with 2 decimals:
+price = 59
+txt = f"The price is {price:.2f} dollars"
+
+
+def myconverter(x):
+  return x * 0.3048
+
+txt = f"The plane is flying at a {myconverter(30000)} meter altitude"
+print(txt)
+
+
+print("Enter your name:")
+name = input()
+print(f"Hello {name}")
+
+name = input("Enter your name:")
+print(f"Hello {name}")
+
+
+y = True
+while y == True:
+  x = input("Enter a number:")
+  try:
+    x = float(x);
+    y = False
+  except:
+    print("Wrong input, please try again.")
+
+print("Thank you!")
+
+
+# A virtual environment in Python is an isolated environment on your computer, where you can run and test your Python projects.
+
+# It allows you to manage project-specific dependencies without interfering with other projects or the original Python installation.
+
+# Think of a virtual environment as a separate container for each Python project. Each container:
+
+# Has its own Python interpreter
+# Has its own set of installed packages
+# Is isolated from other virtual environments
+# Can have different versions of the same package
+# Using virtual environments is important because:
+
+# It prevents package version conflicts between projects
+# Makes projects more portable and reproducible
+# Keeps your system Python installation clean
+# Allows testing with different Python versions
