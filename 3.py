@@ -306,7 +306,7 @@ list1.extend(list2)
 # A tuple is a collection which is ordered and unchangeable.
 
 
-thistuple = ("apple",)
+thistuple = ("apple","banana")
 print(type(thistuple))
 
 #NOT a tuple
