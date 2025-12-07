@@ -36,6 +36,7 @@ def myfunc1():
   return x
 
 print(myfunc1())
+# Output: hello
 
 
 # Python follows the LEGB rule when looking up variable names, and searches for them in this order:
@@ -57,7 +58,7 @@ print("I will print on the same line.")
 #Arithmetic Operators
 a, b = 10, 3
 print(a + b, a - b, a * b, a / b, a // b, a % b)
-# Output: 13 7 30 3.33333333333
+# Output: 13 7 30 3.33333333333 3 1
 
 
 x = 2

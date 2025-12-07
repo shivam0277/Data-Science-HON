@@ -14,7 +14,7 @@ print(type(age))  # Output: <class 'int'>
 
 x = range(10)
 #display x:
-print(x)
+print(x) # Output: range(0, 10)
 #convert to list to display the content of x:
 print(list(x))
 # Output: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
@@ -25,9 +25,6 @@ x = {"name" : "John", "age" : 36}
 print(x)
 #display the data type of x:
 print(type(x)) 
-
-
-
 
 
 #while loop
