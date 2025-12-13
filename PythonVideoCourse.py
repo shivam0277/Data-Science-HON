@@ -91,3 +91,17 @@ print(roger.walk())
 # import math
 # print(math.sqrt(16))
 # print(math.ceil(2.3))
+
+
+#Decorators
+def logtime(func):
+     def wrapper():
+          print("before")
+          val = func()
+          print("after")
+          return val
+     return wrapper
+
+@logtime
+def hello():
+     print("hello")
