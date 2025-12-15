@@ -1,0 +1,54 @@
+pwd - present working directory
+whoami - current user logged 
+date - for date, time
+date +%D - for date only
+date +%T - for time only
+date +%H:%M - for time in hours and minutes format 
+ls - display files and directories in current location 
+ls -lt  - display files and directories in current location with more detailed information
+ls -ltr - same output just the latest modified file is shown at bottomost <button
+ls -lh - same but details about size of files(in kb)
+clear - clear linux terminal
+
+
+CREATING , DELETING AND EDITING FILES 
+read a file - cat filename
+
+read a file and search for a word
+1. less filename
+2. /writetheword   (here forward slash means top to bottom if you write ?writetheword then its bottom to top)
+3. there can be many occurance for a word , write n to move to next occurance
+
+view content of a file page by page - more filename
+create our own file - touch filename 
+delete a file - rm filename
+create a new file and open edit mode as well - vi filename
+
+While in edit mode some text like INSERT will be written at last which means we can write in the file.
+when we done with editing press esc key and the text at bottom(INSERT) will disappear.
+Press SHIFT + : to save at a : will appear at last then write wq to exit . Now we are out of editor.
+
+nano is user-friendly way to edit a file - nano filename
+
+create new folder or directory - mkdir foldername
+delete a folder or directory - rmdir foldername
+
+how to change path or move to another folder in linux- cd foldername/ 
+opens the folder we enter name 
+or if u want to go directly in the folder of folders(need to know exact name of folders and path) - cd foldername/foldername/foldername/
+
+return to prev folder(ek folder peeche jana) - cd ..
+return to prev to prev folder - cd ../..
+
+in Linux main directory is called root directory (root directory is where all file system exist)
+to access - cd /
+
+copy a file - cp filenametobecopied filedirectory
+
+i want change the location of a file from prev folder to this - cd ../filename .
+
+copy the contents of a file to another file - cp filenamecopyfrom filepasteto
+
+move a file to another folder - mv filename foldername/
+
+change file name(no specific command) - mv filenameold filenamenew
