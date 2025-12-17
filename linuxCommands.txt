@@ -84,3 +84,18 @@ how to find file in linux-
 first go to home dir using cd 
 then write-  find ./ -name(exact) filename
 
+how to find a file in linux
+to find file fast and direct- locate filename    (only works for updated files i.e if new files are added you
+need to update the database first)
+to update the database- updatedb or sudo updatedb
+
+
+Utility commands
+how to see previously used commands- history or just use use arrow keys to see prev used commands
+to see filtered list of prev used commands- history | grep anysmallprevcommands(Ex- sort)
+
+to get list of commands- ls --help (unstructured list)
+to get structured list of commands- ls --help | more
+
+to perform small calculations in linux- bc (press ctrl + c to exit the calculator)
+to check calendar- cal or cal anyyear or cal anymonth anyyear 
