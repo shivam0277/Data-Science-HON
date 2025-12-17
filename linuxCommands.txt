@@ -52,3 +52,35 @@ copy the contents of a file to another file - cp filenamecopyfrom filepasteto
 move a file to another folder - mv filename foldername/
 
 change file name(no specific command) - mv filenameold filenamenew
+
+how to read or display top 5 lines from a file in linux-  head -no.oflines(Ex-5) filename(Ex-test.csv)
+how to read or display last 5 lines from a file in linux-  tail -5 test.csv
+
+sort the content from a file in linux- sort filename(Ex-Demo.txt)
+reverse sorting-  sort -r Demo.txt
+
+display unique content from a file in linux-  sort filename | uniq 
+| symbol is used to combine 2 commands.
+
+
+A file has 9 lines , how to split this file in 3 different files in linux-   split -l 3 filename
+
+how to search a word and display matching content from a file in linux-  grep "anyword" filename
+*humne search kara tha par vo similar content mei idhar se udhar jump kar rha tha par ye wala command 
+saare results ek saath display kar deta h*
+
+how to search multiple words and display matching content from a file in linux-  egrep "word1|word2" filename
+
+how to use wildcards in linux- 
+files whose names starts with x-  ls x*
+
+how to count no. of lines in a file in linux-  wc -l filename
+
+how to check if two files are identical or not in linux-  cmp filename1 filename2
+
+how to compare and display differences between 2 files of linux-   diff -u filename1 filename2
+
+how to find file in linux- 
+first go to home dir using cd 
+then write-  find ./ -name(exact) filename
+
