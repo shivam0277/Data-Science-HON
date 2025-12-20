@@ -99,3 +99,17 @@ to get structured list of commands- ls --help | more
 
 to perform small calculations in linux- bc (press ctrl + c to exit the calculator)
 to check calendar- cal or cal anyyear or cal anymonth anyyear 
+
+to check how long server has been running in linux- uptime
+how to start record your activity on terminal in a file?  script 
+how to end record your activity on terminal in a file?  ctrl + D
+
+how to create a shortcut of a long command in linux?   alias l="ls -ltr"
+to view all shortcuts-  alias -p
+
+how to compress a file in linux-  gzip -k filename 
+how to decompress a file in linux-   gunzip filename
+how to compress a folder in linux?  tar -czf  compressfoldername oldfoldername/ 
+hoe to decompress a folder?  tar -xzf foldername
+
+how to compress mutiple files into a single file?  zip zipfilenameyouwant filename1 filename2 
