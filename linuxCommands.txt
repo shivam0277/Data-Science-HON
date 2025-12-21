@@ -113,3 +113,59 @@ how to compress a folder in linux?  tar -czf  compressfoldername oldfoldername/
 hoe to decompress a folder?  tar -xzf foldername
 
 how to compress mutiple files into a single file?  zip zipfilenameyouwant filename1 filename2 
+how to list files in zipped file?  unzip -l filename 
+
+how to download a file from from internet?  wget URL_of_file
+                                            wget -0 givenamefordownloadfile URL_of_file 
+
+how to call an API?  curl apilink 
+how to install an application on linux? apt or yum/dnf 
+Ex- yum install nginx
+
+check installed packages- dnf installed 
+check a particular package- dnf installed | grep java 
+
+how to start/stop service in linux? systemctl start ngnix.service
+to check a service ? systemctl status servicename.service 
+how to list all services- systemctl list-units --type=service --all 
+
+how to list all existing environment variables on linux? print env 
+
+print only 1st and 2nd coloumn from the csv table: awk -F , '{print $1,$2}' filename 
+how to display starting two characters of all line? cut -c1-2 filename 
+display a specific line from a file? sed -n '5p' filename
+5th line will be printed 
+
+replace a word from another word-  sed 's/business/finance/g' filename 
+business will be replaced from finance (it is not a permanent change)
+
+check the size of files-  ls -lh 
+change the file size-  truncate -s sizeyouwant filename 
+
+how to change user or login as different user in linux? su user_name 
+first it will ask password for existing user 
+
+how to exit as current user or close terminal in linux? exit 
+
+if you are not root user, how to execute admin commands like installing new apps?  sudo yum install httpd
+
+access remote servers- ssh user@hostname 
+
+how to check permissions of a file? ls -ltr 
+change ownership of a file-  chown newowner filename 
+change grp ownership of a file- chgrp grpname filename 
+
+check %memory and CPU and utilization- top 
+get id no. of a process- pgrep processname 
+how to stop process by id-  kill -9 process_id 
+how to stop process by name-  pkill name 
+
+
+how to create a new user on our linux server?  useradd name 
+to check ?  id name 
+you will see id and group
+now set password for new user
+
+how to create new group-  groupadd grpname 
+change grp of a user- usermod -G grpname username 
+
