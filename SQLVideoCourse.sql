@@ -113,4 +113,25 @@ INSERT INTO employees VALUES
 -- EXERCISES:
 -- Try inserting an entry into employees with an invalid value for officeCode.
 -- Try inserting an entry into employees with an invalid value for reportsTo.
--- Create a new office location and add some employees for the new location.
+-- Create a new office location and add some employees for the new location. 
+
+
+CREATE TABLE customers (
+  customerNumber INT(11) NOT NULL,
+  customerName VARCHAR(50) NOT NULL,
+  contactLastName VARCHAR(50) NOT NULL,
+  contactFirstName VARCHAR(50) NOT NULL,
+  phone VARCHAR(50) NOT NULL,
+  addressLine1 VARCHAR(50) NOT NULL,
+  addressLine2 VARCHAR(50) NULL DEFAULT NULL,
+  city VARCHAR(50) NOT NULL,
+  state VARCHAR(50) NULL DEFAULT NULL,
+  postalCode VARCHAR(15) NULL DEFAULT NULL,
+  country VARCHAR(50) NOT NULL,
+  salesRepEmployeeNumber INT(11) NULL,
+  creditLimit FLOAT NULL DEFAULT NULL,
+  customerLocation POINT NOT NULL,
+  PRIMARY KEY (customerNumber),
+  FOREIGN KEY (salesRepEmployeeNumber) REFERENCES employees (employeeNumber));
+
+
