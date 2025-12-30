@@ -36,3 +36,49 @@ print(df.info())
 
 #describe()  # Generate descriptive statistics for numerical columns
 print(df.describe())
+
+# df.shape  # Get the dimensions of the DataFrame (rows, columns)
+# df.columns  # Get the column names of the DataFrame
+
+# selecting columns
+# - a series
+# -dataframe multiple columns of data 
+
+column = df['Column Name']  # Select a single column as a Series
+subset = df[["Column", "Column2"]]    # Select multiple columns as a DataFrame 
+
+# filtering rows
+# boolean indexing
+
+#based on simgle condition
+filtered_df = df[df['Age'] > 25]  # Filter rows where Age is greater than  25 
+
+#based on multiple conditions
+filtered_df = df[(df['Age'] > 25) & (df['City'] == 'New York')]  # Filter rows based on multiple 
+
+
+data ={
+    'Name': ['Alice', 'Bob', 'Charlie', 'David', 'Eva'],
+    'Age': [24, 27, 22, 32, 29],
+    'City': ['New York', 'Los Angeles', 'Chicago', 'Houston', 'Phoenix']
+}
+
+df = pd.DataFrame(data)
+
+print("Original DataFrame:")
+print(df)
+
+print("Names (single column return series):")
+name = df['Name']
+print(name)
+
+
+subset = df[['Name', 'City']]
+print("Subset (multiple columns return DataFrame):")
+print(subset)
+
+high_Age = df[df['Age'] > 25]
+print("Filtered DataFrame (Age > 25):")
+print(high_Age)
+
+
