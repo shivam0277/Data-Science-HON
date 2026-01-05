@@ -1,0 +1,8 @@
+Git is a distributed version control system
+It helps multiple people work on the same project or documents by tracking and managing changes to the files.
+
+Why VCS?
+Backup and restore
+Collaboration
+Branching and merging 
+Tracking Changes
