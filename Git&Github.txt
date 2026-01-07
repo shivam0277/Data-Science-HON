@@ -6,3 +6,23 @@ Backup and restore
 Collaboration
 Branching and merging 
 Tracking Changes
+
+We can use git on cmd or git bash(uses linux commands)
+Git was originally developed on Linux by Linus Torvalds to manage the Linux kernel project.
+Git itself is a C program, and its commands are essentially arguments passed to that program.
+
+to set username and mail-id
+git config --global user.name "anyname"
+git config --global user.email "anyemail"
+
+to check username and email currently in use
+git config --list 
+
+git does not access to all files in local comp.
+git initialisation - git init 
+
+git add filename (to add it to git repositary)
+git add * (add everything in current folder to git repo)
+
+to commit 
+git commit -m "message"
