@@ -21,8 +21,46 @@ git config --list
 git does not access to all files in local comp.
 git initialisation - git init 
 
-git add filename (to add it to git repositary)
-git add * (add everything in current folder to git repo)
+git add filename (to add it to git repository or staging area)
+git add * (add everything in current folder to git repo or staging area) 
 
-to commit 
+to commit (A git commit is a command in git that captures a snapshot of the project's currently 
+staged changes, creating a permanent record in the repository's history.)
 git commit -m "message"
+
+The git status command is used to display the current state of the working directory and the 
+staging area. It provides a snapshot of your repository's status without modifying any files or commits. 
+
+git diff- Shows unstaged changes(use git add to move to staging area and the commit)
+
+to check if commit is made - git log 
+
+to check the current branch - git master 
+
+Working Directory: This is where you create, edit, and delete your project files locally. Changes in this area are considered untracked by Git until you decide to manage them.
+Staging Area: The git add command is used to move changes from the working directory to the staging area. This area acts as a temporary buffer where you prepare and group specific changes into a snapshot before permanently saving them.
+Local Repository: The git commit command takes the staged changes and permanently saves them as a new, historical snapshot (commit) in your local repository. This is your personal copy of the project's history.
+Reverting Changes: The git checkout command is used to move back through the history or switch branches, effectively restoring files from the repository to the working directory or staging area.
+
+Shows the changes made to a specific file within a given commit- git show <commitid> <filename> 
+get commit id from git log , enter file name at last 
+Ex- git show 76d6b387ca696b07afd306e8784704e780a42045:index.html
+
+To navigate between various branches, commits and files within git repo- git checkout
+Ex - git checkout 76d6b387ca696b07afd306e8784704e780a42045:index.html
+here the commit with that specific commit id and particularly index.html file is restored.
+
+to get back to latest version- git checkout master -- filename/*
+
+if we made any change by mistake and save it 
+to undo changes, get the last successful change- git restore . or filename(. means all files)
+if we added the changes using git add then - 
+git restore --staged<filepath> #to unstage
+git restore <file_path> #to discard changes in the working directory
+
+
+Added changes to staging area(didnt commit) after this added more changes to file- git restore --worktree filename(index.html)
+
+how about if we did commit also wrong files
+git reset --soft HEAD^(uncommit and keep the changes)
+git reset --hard HEAD^(uncommit and discard the changes)
