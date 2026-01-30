@@ -242,6 +242,7 @@ def my_function(n):
   return lambda a : a * n
 
 
+
 def myfunc(n):
   return lambda a : a * n
 
