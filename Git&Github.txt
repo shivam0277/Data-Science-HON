@@ -64,3 +64,47 @@ Added changes to staging area(didnt commit) after this added more changes to fil
 how about if we did commit also wrong files
 git reset --soft HEAD^(uncommit and keep the changes)
 git reset --hard HEAD^(uncommit and discard the changes)
+
+Logging in Git:
+git log (shows all commits their time, commit id's etc)
+git log -p -anynumber (last anynumber of commits with diff)
+git log --stat  (summary of changes)
+
+git log --pretty=oneline (one line mei dikhayega har commit ki information)
+git log --pretty=format:"%h -&an:ar%s" (h is hash number author name how much time ago(relative hours) what changed)
+git log -S function_name (can be used to get the log of all commits that touched a specific function)
+
+git log --grep="V2" (used to search commit message, v2 is example here)
+
+git log --since="2024-01-01"
+git log --until="2024-01-01"
+
+git log --author="Paul" (Paul is example)
+
+all the commits done until now were on local repo
+Now we will se how to work on remote repo (remote repo refers to a version of your project that resides on a 
+network server or hosted repo on the internet.)
+
+1)create repo on github
+2)two options available create a new repo on the command line or push an existing repo from the command line
+(here we do 2nd option right now)
+
+git remote (Lists the shortnames of your configured remotes.)
+git remote -v (to see the remote repo link)
+
+till now we have seen how to make changes on local repo and push it to remote now we vice versa 
+Example - 
+create a new file in github on that remote repo and add some content 
+commit the changes from there.
+Now on local write git pull(used to fetch and download content from a remote repository)
+
+The git clone command is a core Git utility used to create a local copy, or "clone," of an existing Git repository
+For example my team members or testers
+
+to clone
+1) copy the https link of that github repo
+2) go to terminal
+2) Now select a directory 
+Ex - ls , mkdir Git(to create folder Git if not present or use any folder) , cd Git/ (entered the Git directory)
+3) git clone https-link-of-repo
+4) Now if u write ls in Git directory that repo will be present.
