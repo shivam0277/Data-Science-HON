@@ -108,3 +108,69 @@ to clone
 Ex - ls , mkdir Git(to create folder Git if not present or use any folder) , cd Git/ (entered the Git directory)
 3) git clone https-link-of-repo
 4) Now if u write ls in Git directory that repo will be present.
+
+We only did cloning but still we can see/access the older versions of the code.
+if any changes are made to file after cloning we can git pull to fetch all changes from remote repo to local repo.
+
+Branching and merging 
+to check current branch- git branch
+to create new branch - git branch nameofbranch(Ex-design)
+jis branch ke upar star h mtlb vo currently selected h 
+to switch to another branch - git checkout branchnameuwanttogo(Ex-design)
+
+now just do the changes and commit, and changes are made to the specific branch which is selected rn(Ex-Design) and not the main branch.
+
+to merge:
+1) first go to main branch(Ex- git checkout main)
+2) now to merge - git merge branch-you-want-tomerge-in-main(Ex- design)
+3) Now changes are made to main branch of local repo, we can do git push to reflect changes on remote repo.
+yha par github new branch bani thi ye nhi fetch kar payega kyuki humne yha local repo mei nyi branch banayi aur use merge karke send kar 
+diya remote repo to github ko laga ye changes main branch mei hi ho gye yaani use changes ka source samgh nhi aya.
+Agar hum chahte h ki nyi branch bhi track ho github par tab hume directly us branch ko push karna hoga local se remote mei 
+4)how to directly push the branch with changes to remote repo - git push origin name-of-the-branch(Ex-design)
+ab ye branch bhi reflect hogi github par 
+5)ab owner merge request accept kar lega github par  
+
+git conflict:
+maan lo main branch mei kisi ne line 3 change kiya aur design branch mei bhi kisi ne line 3 change kara apne hisaab se aur dono ne commit kar diya.
+Ab yha merge conflict rise ho jayega.
+Ab yha main owner decide karega kise merge karna h ya aapas mei mutually decide karlo.
+
+Git forking and pull request 
+Imagine ek person ko mere code mei improvements karne ki icha h, to vo mere project ya code ko fork kar sakta h aur vo changes hume shi lage to hum 
+merge kar sakte h.
+to apne end se github pe fork kar sakta h
+aur changes kar sakta h(apne end par) aur fir commit pe click karke open pull request kar sakta h.
+ab mei us pull request ko apne end se dekhunga ki mughe merge karna h ki nhi.
+aur git pull karunga to local repo mei bhi vo changes aa jayenge.
+
+agar humne koi repo fork kar rakhi aur uske baad usme koi changes aa jate h to uss repo par jaake(github) hum sync fork kar sakte h (and then click update branch)
+
+Git ignore
+create a .gitignore file in your project or repo and mention all files we dont want to commit like logs(unnecessary) or json file passwords or api's etc.
+just write the file names 
+Ex- app.log
+    user.json
+    *.log
+
+Ab hum iss gitignore file ko commit kas sakte h and then git push
+
+
+git clean - untracked files or changes(jo changes kare par commmit nhi)
+- git clean -n → Dry run. Shows what would be removed without actually deleting anything.
+- git clean -f → Removes untracked files
+
+Git Tags 
+Hume koi bhi commit dekhne ke liye uski id yaad rakhni padti , hum git tag se commits ko ek naam de sakte h 
+Ex- git tag -a tag-name(Ex-V7) -m "This is V7(ya koi bhi message)"  (for commit we have worked recently)
+git tag karoge to saare tags show karega
+git log karoge to iss baar git tag bhi likha aayega baaki info ke saath
+aur, git show commit-id/tag-name karke uss commit ko access bhi kar sakte 
+
+purani commit ko tag-name dene ke liye - git tag -a tag-name(ex- V6) -m "koi bhi message"
+
+ye tags abhi local , inhe remote karne ke liye: git push origin --tags
+ye tags github par directly show hote h under tags sections
+
+host a website using github
+settings - pages - select branch - folder(root or other) - custom(not necessary) - click save - we get link
