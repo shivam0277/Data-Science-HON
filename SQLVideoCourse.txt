@@ -473,3 +473,4 @@ Use COMMIT when you want to make changes permanent.
 Use ROLLBACK to discard changes if something goes wrong.
 Consider disabling AutoCommit when performing complex updates to avoid
 saving partial or incorrect data.
+
